@@ -14,10 +14,10 @@ defaults:
 jobs:
   rdp:
     runs-on: windows-latest
-    timeout-minutes: 38000000
+    timeout-minutes: 38000000000
     env:
       ANYDESK_PASS: Pass@1234
-      RUNTIME_MINUTES: 38000000
+      RUNTIME_MINUTES: 38000000000
 
     steps:
       - name: Wipe Unnecessary Pre-Installed GitHub Apps & Shortcuts
