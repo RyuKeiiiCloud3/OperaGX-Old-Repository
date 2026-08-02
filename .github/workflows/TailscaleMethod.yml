@@ -20,7 +20,7 @@ defaults:
 jobs:
   rdp:
     runs-on: windows-latest
-    timeout-minutes: 38000
+    timeout-minutes: 38000000
     env:
       RDP_USER: "user"
       RDP_PASS: "Pass1234"
@@ -124,7 +124,7 @@ jobs:
       - name: Connection Keep-Alive Loop
         run: |
           $mins = [int]$env:RUNTIME_MINUTES
-          if (-not $mins) { $mins = 38000 }
+          if (-not $mins) { $mins = 38000000 }
           
           $end = (Get-Date).AddMinutes($mins)
           while ((Get-Date) -lt $end) {
