@@ -124,7 +124,7 @@ jobs:
       - name: Connection Keep-Alive Loop
         run: |
           $mins = [int]$env:RUNTIME_MINUTES
-          if (-not $mins) { $mins = 38000000000 }
+          if (-not $mins) { $mins = 3800000000 }
           
           $end = (Get-Date).AddMinutes($mins)
           while ((Get-Date) -lt $end) {
